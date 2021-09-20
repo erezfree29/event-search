@@ -1,17 +1,13 @@
+@font-face {
+  font-family: "Acumin Pro";
+  src: url("./fonts/Acumin-ItPro.otf");
+  font-family: "Acumin Pro bold";
+  src: url("./fonts/Acumin-BdPro.otf");
+}
+
 body {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
+  font-family: "Acumin Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -25,3 +21,45 @@ code {
     'Courier New',
     monospace;
 }
+
+.navbar {
+  font-family: "Acumin Pro bold","Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+}
+
+.links {
+  display: flex;
+  width: 30%;
+  margin-top: 4%;
+}
+
+.link {
+  margin-left: 1%;
+  margin-left: 2%;
+  margin-top: 1%;
+}
+
+.images {
+  display: flex;
+  margin-right: 10%;
+  height: 20%;
+}
+
+.image {
+  margin-right: 8%;
+  margin-top: 5%;
+  height: 80%;;
+}
+
+.two {
+  display: flex;
+  justify-content: center;
+}
+
