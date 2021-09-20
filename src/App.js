@@ -8,8 +8,8 @@ import { store } from './app/redux/store';
 
 import Header from './components/Header';
 import MissionsPage from './components/Missons';
-import RocketsPage from './components/Rockets';
 import MyprofilePage from './components/Myprofile';
+import MatchesPage from './components/matches';
 
 function App() {
   return (
@@ -25,10 +25,10 @@ function App() {
               <Missions />
             </Route>
             <Route exact path="/rockets">
-              <Rockets />
+              <Matches />
             </Route>
             <Route exact path="/">
-              <Rockets />
+              <Matches />
             </Route>
           </Switch>
         </div>
@@ -37,8 +37,8 @@ function App() {
   );
 }
 
-function Rockets() {
-  return <RocketsPage />;
+function Matches() {
+  return <MatchesPage />;
 }
 
 function Missions() {

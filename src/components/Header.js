@@ -1,6 +1,3 @@
-/* eslint-disable react/no-unknown-property */
-/* eslint-disable jsx-a11y/mouse-events-have-key-events */
-/* eslint-disable no-unused-vars */
 import { NavLink } from 'react-router-dom';
 
 const Header = () => (
