@@ -7,9 +7,9 @@ import {
 import { store } from './app/redux/store';
 
 import Header from './components/Header';
-import MissionsPage from './components/Missons';
-import MyprofilePage from './components/Myprofile';
-import MatchesPage from './components/matches';
+import Premier from './components/Premier';
+import LaLiga from './components/Laliga';
+import SeriaA from './components/SeriaA';
 
 function App() {
   return (
@@ -18,17 +18,17 @@ function App() {
         <div className="App">
           <Header />
           <Switch>
-            <Route path="/myprofile">
-              <Myprofile />
+            <Route path="/priemier">
+              <Pleague />
             </Route>
-            <Route path="/missions">
-              <Missions />
+            <Route path="/seria">
+              <Sera />
             </Route>
-            <Route exact path="/rockets">
-              <Matches />
+            <Route exact path="/laliga">
+              <Lliga />
             </Route>
             <Route exact path="/">
-              <Matches />
+              <Lliga />
             </Route>
           </Switch>
         </div>
@@ -37,16 +37,16 @@ function App() {
   );
 }
 
-function Matches() {
-  return <MatchesPage />;
+function Lliga() {
+  return <LaLiga />;
 }
 
-function Missions() {
-  return <MissionsPage />;
+function Pleague() {
+  return <Premier />;
 }
 
-function Myprofile() {
-  return <MyprofilePage />;
+function Sera() {
+  return <SeriaA />;
 }
 
 export default App;

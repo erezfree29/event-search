@@ -7,7 +7,7 @@ export const updateState = (payload) => ({
   payload,
 });
 
-const matchesReducer = (state = initialState, action) => {
+const seriaReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_MATCHES:
       return action.payload;
@@ -16,4 +16,4 @@ const matchesReducer = (state = initialState, action) => {
   }
 };
 
-export default matchesReducer;
+export default seriaReducer;

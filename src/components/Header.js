@@ -5,23 +5,23 @@ const Header = () => (
     <div className="links">
       <div className="link">
         <NavLink
-          to="/rockets"
+          to="/laliga"
         >
-          Rockets
+          LaLiga
         </NavLink>
       </div>
       <div className="link">
         <NavLink
-          to="/missions"
+          to="/priemier"
         >
-          Missions
+          Priemier League
         </NavLink>
       </div>
       <div className="link">
         <NavLink
-          to="/myprofile"
+          to="/seria"
         >
-          My profile
+          Seria A
         </NavLink>
       </div>
     </div>

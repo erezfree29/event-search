@@ -4,10 +4,16 @@ import thunk from 'redux-thunk';
 
 import logger from 'redux-logger';
 
-import matchesReducer from './matches';
+import laLigaReducer from './laliga';
+
+import premierReducer from './premer';
+
+import seriaReducer from './seriaA';
 
 const reducer = combineReducers({
-  matchesReducer,
+  laLigaReducer,
+  premierReducer,
+  seriaReducer,
 });
 
 export const store = createStore(
