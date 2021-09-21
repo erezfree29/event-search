@@ -111,3 +111,11 @@ code {
    top: 80px;
    display: none;
 }
+
+.matches {
+  margin-top: 130px;
+}
+
+.match {
+  background-image: url("https://res.cloudinary.com/erezfriemagor/image/upload/v1622463601/n2nxgeuh750ao53dzuh4.jpg");
+}
