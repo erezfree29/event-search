@@ -162,6 +162,16 @@ code {
   font-weight: bold;
 }
 
+.ldate {
+  color: white;
+}
+
+.pdate {
+  color: red;
+  margin-left: 90px;
+  font-size: 20px;
+}
+
 
 
 

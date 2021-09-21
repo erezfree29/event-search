@@ -35,10 +35,10 @@ function Premier() {
           {storeMatches.map((match) => (
             <a href={match.matchviewUrl}>
               <td className="cell">
-                <img className="image" id={match} src="https://res.cloudinary.com/erezfriemagor/image/upload/v1632234932/skysports-premier-league-return_5000805.jpg" alt="match" />
+                <img className="image" id={match} src={match.thumbnail} alt="match" />
                 <div className="info pinfo">
                   <h5 className="title">{match.title}</h5>
-                  <div>{match.date.slice(0, 10)}</div>
+                  <div className="pdate">{match.date.slice(0, 10)}</div>
                 </div>
               </td>
             </a>

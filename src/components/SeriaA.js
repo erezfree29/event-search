@@ -35,7 +35,7 @@ function SeriaA() {
           {storeMatches.map((match) => (
             <a href={match.matchviewUrl}>
               <td className="cell">
-                <img className="image" id={match} src="https://res.cloudinary.com/erezfriemagor/image/upload/v1632235178/anq6i4s8yhnx9gdvkz8k.jpg" alt="match" />
+                <img className="image" id={match} src={match.thumbnail} alt="match" />
                 <div className="info ainfo">
                   <h5 className="title">{match.title}</h5>
                   <div>{match.date.slice(0, 10)}</div>

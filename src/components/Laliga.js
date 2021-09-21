@@ -36,10 +36,10 @@ function LaLiga() {
           {storeMatches.map((match) => (
             <a href={match.matchviewUrl}>
               <td className="cell">
-                <img className="image" id={match} src="https://res.cloudinary.com/erezfriemagor/image/upload/v1632229494/laliga-1534239805985.jpg" alt="match" />
+                <img className="image" id={match} src={match.thumbnail} alt="match" />
                 <div className="info">
                   <h5 className="title">{match.title}</h5>
-                  <div>{match.date.slice(0, 10)}</div>
+                  <div className="ldate">{match.date.slice(0, 10)}</div>
                 </div>
               </td>
             </a>
