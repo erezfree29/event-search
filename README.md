@@ -1,44 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Metrics-webapp
 
-## Available Scripts
+This is a final capstone project app.
 
-In the project directory, you can run:
+The app fetches information from the https://www.scorebat.com api.
 
-### `npm start`
+It displays recent matches of europe's top leagues,clicking on an image will link the user to a video of the match.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#### The app demonstrates the use of NPM, Webpack,React and Redux.
 
-### `npm test`
+## Built with
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   React
+-   Redux
+-   Java scrtipts ES6
+-   NPM
+-   WEBPACK
+-   HTML
+-   CSS
+-   VScode
+-   Lots of love :heart:
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run the project on your local machine, please run the following commands on your terminal:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+> 1. run `git clone https://github.com/erezfree29/Metrics-webapp/`
+> 2. run `cd Metrics-webapp`
+> 3. type npm install 
+> 4. type npm start 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Author
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+👤 **Erez Friemagor**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[<code><img height="26" src="https://cdn.iconscout.com/icon/free/png-256/github-153-675523.png"></code>](https://github.com/erezfree29)
+[<code><img height="26" src="https://upload.wikimedia.org/wikipedia/sco/thumb/9/9f/Twitter_bird_logo_2012.svg/1200px-Twitter_bird_logo_2012.svg.png"></code>](https://twitter.com/friemagor?lang=en)
+[<code><img height="26" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/1200px-Linkedin.svg.png"></code>](https://www.linkedin.com/in/erez-friemagor/?originalSubdomain=uk)
+<a href="mailto:erezfree29@gmail.com?subject=Hey Erez!"><img height="26" src="https://cdn.worldvectorlogo.com/logos/official-gmail-icon-2020-.svg"></a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🤝 Contributing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Contributions, issues and feature requests are welcome!
 
-## Learn More
+Feel free to check the [issues](https://github.com/erezfree29/Metrics-webapp/issues)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Show your support
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+-   Microverse
+-   The Odin Project
+
+## 📝 MIT License
+
+This project makes use of the MIT license.
