@@ -11,6 +11,7 @@ function SeriaA() {
   const fetchItems = async () => {
     const data = await fetch('https://www.scorebat.com/video-api/v3/');
     const matchesJason = await data.json();
+    console.log(matchesJason);
     const matches = matchesJason.response.filter((match) => match.competition === 'ITALY: Serie A');
     dispatch(updateState(matches));
   };
@@ -51,3 +52,6 @@ function SeriaA() {
   );
 }
 export default SeriaA;
+
+
+
