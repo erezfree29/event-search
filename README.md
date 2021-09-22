@@ -32,13 +32,25 @@ Additional description of the project and its features.
 
 ### Installation
 
-To run the project on your local machine, please run the following commands on your terminal:
+you need to make sure you have the following on your machine
+
+first make sure you have Nodejs and Npm installed on your local machine 
+
+[How to Install Node.js and npm on Ubuntu 18.04](https://linuxize.com/post/how-to-install-node-js-on-ubuntu-18.04/)
+
+alternatively to installing npm is to install 'yarn' 
 
 > 1. run `git clone https://github.com/erezfree29/Metrics-webapp/`
 > 2. run `cd Metrics-webapp`
-> 3. type npm install 
+> 3. type npm install / or yarn install.
 > 4. type npm start 
 
+
+### testing
+
+> 1. I have used the 'jest' testing Library.
+> 2. The jest package is listed in the project's package jason.
+> 3. Once you run npm install simply type jest and it will run the tests 
 
 ## Author
 
