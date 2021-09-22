@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * @jest-environment jsdom
  */
@@ -6,8 +7,8 @@ import 'regenerator-runtime/runtime';
 import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import LaLiga from '../components/Laliga';
 import { store } from '../App/redux/store';
-import LaLiga from '../components/laliga';
 import '@testing-library/jest-dom/extend-expect';
 
 describe('check if all component are rendered', () => {
