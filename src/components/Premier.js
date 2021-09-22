@@ -29,11 +29,12 @@ function Premier() {
           <NavLink
             to="/"
           >
-            <div className="back"><i className="fas fa-chevron-right" /></div>
+            <div className="back"><i className="fas fa-angle-left" /></div>
           </NavLink>
         </div>
         <div className="views">League matches</div>
       </nav>
+      <div className="hand move_down"><i className="fas fa-hand-point-up" /></div>
       <div className="league_top">
         <div className="lename name"> premier League</div>
         <img className="image_top" src="https://res.cloudinary.com/erezfriemagor/image/upload/v1632316697/Premier_League_Logo.svg.png" alt="premier" />

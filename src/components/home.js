@@ -26,7 +26,11 @@ function Homepage() {
         </thead>
         <tbody>
           <tr>
-            <td><div className="league_card bright adjust">Alfreds Futterkiste</div></td>
+            <td>
+              <div className="league_card bright adjust">
+                <img className="europe" src="https://res.cloudinary.com/erezfriemagor/image/upload/v1632344073/black-map-europe-countries-white-background-vector-illustration-149712794.jpg" alt="europe" />
+              </div>
+            </td>
             <td>
               <div className="league_card dark">
                 <div className="area">Europe</div>
@@ -40,11 +44,15 @@ function Homepage() {
                 <NavLink
                   to="/laliga"
                 >
-                  <div className="right_card">
-                    <div className="league_card dark adjust">
-                      <div className>La liga</div>
-                    </div
-              >
+
+                  <div className="league_card dark adjust">
+                    <div className>
+                      <div><i className="fas fa-arrow-circle-right arrow_home" /></div>
+                      <div className="states">states by league</div>
+                      <div className="hand"><i className="fas fa-hand-point-up" /></div>
+                      <img className="league_list_image" src="https://res.cloudinary.com/erezfriemagor/image/upload/v1632229494/laliga-1534239805985.jpg" alt="la_liga" />
+                      <div className="league_name">La liga</div>
+                    </div>
                   </div>
                 </NavLink>
               </div>
@@ -55,11 +63,13 @@ function Homepage() {
                 <NavLink
                   to="/priemier"
                 >
-                  <div className="right_card">
-                    <div className="league_card bright adjust">
-                      <div className> Premier League</div>
-                    </div
-              >
+
+                  <div className="league_card bright adjust">
+                    <div className>
+                      <div><i className="fas fa-arrow-circle-right arrow_home" /></div>
+                      <img className="league_list_image" src="https://res.cloudinary.com/erezfriemagor/image/upload/v1632316697/Premier_League_Logo.svg.png" alt="la_liga" />
+                      <div className="league_name">Premier League</div>
+                    </div>
                   </div>
                 </NavLink>
               </div>
@@ -72,11 +82,13 @@ function Homepage() {
                 <NavLink
                   to="/seria"
                 >
-                  <div className="right_card">
-                    <div className="league_card bright adjust">
-                      <div className>Seria A</div>
-                    </div
-              >
+
+                  <div className="league_card bright adjust">
+                    <div className>
+                      <div><i className="fas fa-arrow-circle-right arrow_home" /></div>
+                      <img className="league_list_image" src="https://res.cloudinary.com/erezfriemagor/image/upload/v1632317862/italy-serie-a.png" alt="la_liga" />
+                      <div className="league_name">Seria A</div>
+                    </div>
                   </div>
                 </NavLink>
               </div>
@@ -85,13 +97,15 @@ function Homepage() {
             <td>
               <div className="link">
                 <NavLink
-                  to="/priemier"
+                  to="/bundes"
                 >
-                  <div className="right_card">
-                    <div className="league_card dark adjust">
-                      <div className> Premier League</div>
-                    </div
-              >
+
+                  <div className="league_card bright adjust">
+                    <div className>
+                      <div><i className="fas fa-arrow-circle-right arrow_home" /></div>
+                      <img className="league_list_image" src="https://res.cloudinary.com/erezfriemagor/image/upload/v1632348556/27160_imgw968.png" alt="la_liga" />
+                      <div className="league_name">Bundes Liga</div>
+                    </div>
                   </div>
                 </NavLink>
               </div>

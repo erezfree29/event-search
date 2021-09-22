@@ -16,7 +16,7 @@
   background-color: #dd4883;
   height: 8vh;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 body {
@@ -112,15 +112,16 @@ body {
 }
 
 .league_card {
-  height: 20vh;
-  width: 50vw;
+  height: 31vh;
+  width: 48vw;
+  position: relative;
 }
 
 .adjust {
   margin-right: -2px;
   border-right: solid 0.1px  #fb5092;
   border-top: solid 2px  #fb5092;
-  margin-top: -3px;
+  margin-top: -4px;
   position: relative;
   z-index: 1;
 }
@@ -131,4 +132,66 @@ body {
   top: 120px;
   right: 80px;
   font-size: 25px;
+}
+
+.europe {
+  width: 130px;
+  opacity: 0.1;
+  background-color: #fb5092;
+  position: absolute;
+  left: 110px;
+  top: 90px;
+}
+
+.league_name {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  left: 115px;
+  top: 180px;
+  font-size: 25px;
+}
+
+.states {
+  color: #f3afcb;
+  text-decoration: none;
+}
+
+.leagues_list a {
+  text-decoration: none;
+}
+
+.arrow_home{
+  position: absolute;
+  color: white;
+  right: 3px;
+  top: 20px;
+}
+
+.league_list_image {
+  width: 120px;
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  opacity: 0.2;
+}
+
+.bundes_liga
+{
+  height: 100vh;
+  background-color: #fb5092;
+  opacity: 1;
+}
+
+.hand {
+  color: black;
+  font-size: 45px;
+  position: absolute;
+  top: 180px;
+  left: 60px;
+}
+
+.move_down {
+  top: 310px;
+  left: 245px;
 }

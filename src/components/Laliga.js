@@ -30,7 +30,7 @@ function Laliga() {
           <NavLink
             to="/"
           >
-            <div className="back"><i className="fas fa-chevron-right" /></div>
+            <div className="back"><i className="fas fa-angle-left" /></div>
           </NavLink>
         </div>
         <div className="views">League matches</div>

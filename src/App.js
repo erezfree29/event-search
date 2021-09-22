@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Provider } from 'react-redux';
 import {
   BrowserRouter as Router,
@@ -9,6 +10,7 @@ import Premier from './components/Premier';
 import SeriaA from './components/SeriaA';
 import Homepage from './components/home';
 import LaLiga from './components/Laliga';
+import Bundesliga from './components/Bundesliga';
 
 function App() {
   return (
@@ -16,6 +18,9 @@ function App() {
       <Router>
         <div className="App">
           <Switch>
+            <Route exact path="/bundes">
+              <Bundes />
+            </Route>
             <Route path="/priemier">
               <Pleague />
             </Route>
@@ -49,6 +54,10 @@ function Home() {
 
 function La() {
   return <LaLiga />;
+}
+
+function Bundes() {
+  return <Bundesliga />;
 }
 
 export default App;
