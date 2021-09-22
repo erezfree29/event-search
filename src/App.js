@@ -5,18 +5,16 @@ import {
   Route,
 } from 'react-router-dom';
 import { store } from './app/redux/store';
-
-import Header from './components/Header';
 import Premier from './components/Premier';
-import LaLiga from './components/Laliga';
 import SeriaA from './components/SeriaA';
+import Homepage from './components/home';
+import LaLiga from './__test__/Laliga';
 
 function App() {
   return (
     <Provider store={store}>
       <Router>
         <div className="App">
-          <Header />
           <Switch>
             <Route path="/priemier">
               <Pleague />
@@ -25,10 +23,10 @@ function App() {
               <Sera />
             </Route>
             <Route exact path="/laliga">
-              <Lliga />
+              <La />
             </Route>
             <Route exact path="/">
-              <Lliga />
+              <Home />
             </Route>
           </Switch>
         </div>
@@ -37,16 +35,20 @@ function App() {
   );
 }
 
-function Lliga() {
-  return <LaLiga />;
-}
-
 function Pleague() {
   return <Premier />;
 }
 
 function Sera() {
   return <SeriaA />;
+}
+
+function Home() {
+  return <Homepage />;
+}
+
+function La() {
+  return <LaLiga />;
 }
 
 export default App;

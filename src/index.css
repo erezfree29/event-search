@@ -24,6 +24,7 @@ code {
 
 .navbar {
   position: fixed;
+  color: #f3afcb;
   top: 0;
   left: 0;
   right: 0;
@@ -31,8 +32,9 @@ code {
   text-decoration: none;
   display: flex;
   justify-content: space-between;
-  background-color: #f9f9f9;
-  height: 12vh;
+  background-color: #dd4883;
+  height: 8vh;
+  width: 100%;
 }
 
 .navbar a {
@@ -48,7 +50,7 @@ code {
 }
 
 .link {
-  margin-left: 1%;
+  margin-left: 90%;
   margin-left: 2%;
   margin-top: 1%;
 }
@@ -121,15 +123,12 @@ code {
   background-image: url("https://res.cloudinary.com/erezfriemagor/image/upload/v1622463601/n2nxgeuh750ao53dzuh4.jpg");
 }
 
-.container {
-  margin-left: 30px;
-}
-
 .image {
   width: 400px;
-  margin-right: 10px;
+  height: 200px;
   margin-bottom: 10px;
-  margin-left: 20px;
+  margin-left: 42px;
+  background-blend-mode: lighten;
 }
 
 .image_container {
@@ -170,3 +169,155 @@ code {
   color: red;
   font-size: 20px;
 }
+
+.table {
+  background-color: #dd4883;
+  margin-right: 60px;
+
+}
+
+.league  {
+  height: 100px;
+}
+
+.table td{
+  display: flex;
+  justify-content: space-between;
+}
+
+.page{
+  background-color: #dd4883;
+}
+
+.lname {
+  background-color: #dd4883;
+  height: 230px;
+}
+
+.ltitle {
+  margin-top: 100px;
+  margin-left: 230px;
+  color:  #f3afcb;
+}
+
+.views {
+  margin-right: 35vw;
+}
+
+.leagues_list {
+  margin-top: 100px;
+  background-color: #fc5193;
+}
+
+.page {
+  margin-top: 60px;
+}
+
+.league_name {
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 120px;
+  color: white;
+  text-decoration: none;
+}
+
+.leagues_table {
+  margin-top: 70px;
+  width: 100vw;
+}
+
+.league_card {
+  height: 45vh;
+  background-color: #fc5193;
+  position: relative;
+  margin-right: -5.5px;
+}
+
+table  {
+  width: 100%;
+}
+
+.lename {
+  position: absolute;
+  top: 120px;
+  left: 90px;
+  color: white;
+  font-size: 30px;
+}
+
+.dark {
+  background-color: #dd4883;
+}
+
+.limage {
+  width: 100px;
+}
+
+
+
+.ptitle {
+  position: absolute;
+  top: 200px;
+  left: 20px;
+  color: white;
+}
+
+.table tr {
+  width: 100vw;
+}
+
+.mcard {
+  width: 100vw;
+  height: 12vh;
+  color: white;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.league_top {
+  background-color: #fb5092;
+  height: 45vw;
+  margin-bottom: 0.01vw;
+}
+
+.name {
+  margin-left: 160px;
+}
+
+.image_top {
+  top: 130px;
+  position:absolute;
+  width: 130px;
+  left: 55px;
+}
+
+.homepage {
+  background-color: #dd4883;
+}
+
+.back {
+  position: absolute;
+  font-size: 30px;
+  top: 20px;
+  left: 20px;
+  color: white;
+}
+
+.mdate {
+  padding-right: 60px;
+  display: flex;
+}
+
+.dword {
+  margin-right: 5px;
+}
+
+.fa-arrow-circle-right
+{
+  margin-left: 20px;
+}
+
+
+

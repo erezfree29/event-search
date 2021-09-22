@@ -1,5 +1,8 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable react/jsx-key */
+
+import { NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useEffect } from 'react';
 
@@ -21,27 +24,41 @@ function Premier() {
 
   return (
     <>
-      <div className="matches container" />
-      <table className="table table-borderless">
+      <nav className="navbar">
+        <div className="link">
+          <NavLink
+            to="/"
+          >
+            <div className="back">{'<'}</div>
+          </NavLink>
+        </div>
+        <div className="views">League matches</div>
+      </nav>
+      <div className="league_top">
+        <div className="lename name"> premier League</div>
+        <img className="image_top" src="https://res.cloudinary.com/erezfriemagor/image/upload/v1632316697/Premier_League_Logo.svg.png" alt="premier" />
+      </div>
+      <table className=" table table-borderless table-striped up container">
         <thead>
           <tr>
-            <th />
-            <th />
-            <th />
-            <th />
+            <th scope="col" />
           </tr>
         </thead>
         <tbody>
           {storeMatches.map((match) => (
-            <a href={match.matchviewUrl}>
-              <td className="cell">
-                <img className="image" id={match} src={match.thumbnail} alt="match" />
-                <div className="info pinfo">
-                  <h5 className="title">{match.title}</h5>
-                  <div className="pdate">{match.date.slice(0, 10)}</div>
+            <tr>
+              <td>
+                <div className="mcard">
+                  <div className="mtitle">{match.title}</div>
+                  <div className="mdate">
+                    <div className="dword">Date</div>
+                    <div>{match.date.slice(0, 10)}</div>
+                    <div><i className="fas fa-arrow-circle-right" /></div>
+                  </div>
                 </div>
               </td>
-            </a>
+            </tr>
+
           ))}
         </tbody>
       </table>
