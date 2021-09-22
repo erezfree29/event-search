@@ -49,14 +49,16 @@ function Laliga() {
           {storeMatches.map((match) => (
             <tr>
               <td>
-                <div className="mcard">
-                  <div>{match.title}</div>
-                  <div className="mdate">
-                    <div className="dword">Date</div>
-                    <div>{match.date.slice(0, 10)}</div>
-                    <div><i className="fas fa-arrow-circle-right" /></div>
+                <a href={match.matchviewUrl}>
+                  <div className="mcard">
+                    <div>{match.title}</div>
+                    <div className="mdate">
+                      <div className="dword">Date</div>
+                      <div>{match.date.slice(0, 10)}</div>
+                      <div><i className="fas fa-arrow-circle-right" /></div>
+                    </div>
                   </div>
-                </div>
+                </a>
               </td>
             </tr>
 

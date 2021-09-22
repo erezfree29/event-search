@@ -48,6 +48,10 @@ body {
   width: 100vw;
 }
 
+.table a {
+  text-decoration: none;
+}
+
 .mcard {
   width: 100vw;
   height: 15vh;

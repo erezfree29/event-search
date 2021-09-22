@@ -51,10 +51,51 @@ function Homepage() {
 
             </td>
             <td>
-              <div className="league_card bright adjust">
-                <div className>La liga</div>
-              </div
+              <div className="link">
+                <NavLink
+                  to="/priemier"
+                >
+                  <div className="right_card">
+                    <div className="league_card bright adjust">
+                      <div className> Premier League</div>
+                    </div
               >
+                  </div>
+                </NavLink>
+              </div>
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="link">
+                <NavLink
+                  to="/seria"
+                >
+                  <div className="right_card">
+                    <div className="league_card bright adjust">
+                      <div className>Seria A</div>
+                    </div
+              >
+                  </div>
+                </NavLink>
+              </div>
+
+            </td>
+            <td>
+              <div className="link">
+                <NavLink
+                  to="/priemier"
+                >
+                  <div className="right_card">
+                    <div className="league_card dark adjust">
+                      <div className> Premier League</div>
+                    </div
+              >
+                  </div>
+                </NavLink>
+              </div>
+
             </td>
           </tr>
         </tbody>
