@@ -1,10 +1,10 @@
-# Metrics-webapp
+# Metrics-web app
 
 This is a final capstone project app.
 
-The app fetches information from the https://www.scorebat.com api.
+The app fetches information from the https://www.scorebat.com API.
 
-It displays recent matches of europe's top leagues,clicking on an image will link the user to a video of the match.
+It displays recent matches of Europe's top leagues, clicking on an image will link the user to a video of the match.
 
 
 Additional description of the project and its features.
@@ -22,19 +22,19 @@ Additional description of the project and its features.
 
 -   React
 -   Redux
--   Java scrtipts ES6
--   NPM
--   WEBPACK
--   HTML
--   CSS
--   VScode
--   Lots of love :heart:
+-   Java scripts ES6
+-   NPM
+-   WEBPACK
+-   HTML
+-   CSS
+-   vscode
+-   Lots of love :heart:
 
 ### Installation
 
 you need to make sure you have the following on your machine
 
-first make sure you have Nodejs and Npm installed on your local machine 
+first, make sure you have Nodejs and Npm installed on your local machine 
 
 [How to Install Node.js and npm on Ubuntu 18.04](https://linuxize.com/post/how-to-install-node-js-on-ubuntu-18.04/)
 
@@ -49,7 +49,7 @@ alternatively to installing npm is to install 'yarn'
 ### testing
 
 > 1. I have used the 'jest' testing Library.
-> 2. The jest package is listed in the project's package jason.
+> 2. The jest package is listed in the project's package, Jason.
 > 3. Once you run npm install simply type jest and it will run the tests 
 
 ## Author
@@ -63,7 +63,7 @@ alternatively to installing npm is to install 'yarn'
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues](https://github.com/erezfree29/Metrics-webapp/issues)
 
@@ -78,8 +78,8 @@ Give a ⭐️ if you like this project!
 
 ## Design
 
-I have a desgin created by 
-- Nelson Sakwa ,User Interface Designer
+I have a design created by 
+- Nelson Sakwa, User Interface Designer
 - Sakwa Design Studio Nairobi, Kenya 
 - sakwadesign.com
 
