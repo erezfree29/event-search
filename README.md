@@ -11,11 +11,11 @@ Additional description of the project and its features.
 
 ## 🔴  Live Demo
 
-[Space-travelers-hub](https://vigorous-jang-d9676c.netlify.app)
+[Metrics-webapp](https://wizardly-kilby-57b112.netlify.app/)
 
 ## Project Overview Video
 
-[Watch Here](https://drive.google.com/file/d/1ET6WM92e4OX3g3r_24C-X2K7tple-MaH/view?usp=sharing)
+[Watch Here](https://www.loom.com/share/83001f604bd04a51a28fd19b935d4727)
 
 
 ## Built with
@@ -74,3 +74,5 @@ I have a desgin created by
 ## 📝 MIT License
 
 This project makes use of the MIT license.
+
+
