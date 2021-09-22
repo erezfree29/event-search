@@ -11,7 +11,6 @@ function LaLiga() {
   const fetchItems = async () => {
     const data = await fetch('https://www.scorebat.com/video-api/v3/');
     const matchesJason = await data.json();
-    console.log(matchesJason);
     const matches = matchesJason.response.filter((match) => match.competition === 'SPAIN: La Liga');
     dispatch(updateState(matches));
   };

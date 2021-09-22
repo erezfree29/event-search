@@ -7,7 +7,16 @@ The app fetches information from the https://www.scorebat.com api.
 It displays recent matches of europe's top leagues,clicking on an image will link the user to a video of the match.
 
 
-#### The app demonstrates the use of NPM, Webpack,React and Redux.
+Additional description of the project and its features.
+
+## 🔴  Live Demo
+
+[Space-travelers-hub](https://vigorous-jang-d9676c.netlify.app)
+
+## Project Overview Video
+
+[Watch Here](https://drive.google.com/file/d/1ET6WM92e4OX3g3r_24C-X2K7tple-MaH/view?usp=sharing)
+
 
 ## Built with
 
@@ -54,6 +63,13 @@ Give a ⭐️ if you like this project!
 
 -   Microverse
 -   The Odin Project
+
+## Design
+
+I have a desgin created by 
+- Nelson Sakwa ,User Interface Designer
+- Sakwa Design Studio Nairobi, Kenya 
+- sakwadesign.com
 
 ## 📝 MIT License
 
