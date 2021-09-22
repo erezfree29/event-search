@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  font-family: "Acumin Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -27,7 +27,7 @@ code {
   top: 0;
   left: 0;
   right: 0;
-  font-family: "Acumin Pro bold","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Acumin Pro bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
   display: flex;
   justify-content: space-between;
@@ -67,19 +67,19 @@ code {
 }
 
 .hide {
-  font-family: inherit;;
-   font-size: 11px;
-   font-weight: bold;
-   color: dimgray;
-   line-height: 2;
-   padding: 20px 0;
-   text-transform: uppercase;
-   white-space: nowrap;
-   background-color: white;
-   display: none;
-   position: absolute;
-   right: 85px;
-   height: 60px;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: bold;
+  color: dimgray;
+  line-height: 2;
+  padding: 20px 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: white;
+  display: none;
+  position: absolute;
+  right: 85px;
+  height: 60px;
 }
 
 .featured {
@@ -98,19 +98,19 @@ code {
 }
 
 .hide_two {
-  font-family: inherit;;
-   font-size: 11px;
-   font-weight: bold;
-   color: dimgray;
-   line-height: 2;
-   padding: 20px 0;
-   text-transform: uppercase;
-   white-space: nowrap;
-   background-color: white;
-   position: absolute;
-   right: 40px;
-   top: 80px;
-   display: none;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: bold;
+  color: dimgray;
+  line-height: 2;
+  padding: 20px 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: white;
+  position: absolute;
+  right: 40px;
+  top: 80px;
+  display: none;
 }
 
 .matches {
@@ -132,8 +132,7 @@ code {
   margin-left: 20px;
 }
 
-.image_container 
-{
+.image_container {
   display: flex;
 }
 
@@ -171,7 +170,3 @@ code {
   margin-left: 90px;
   font-size: 20px;
 }
-
-
-
-
