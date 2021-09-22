@@ -1,25 +1,8 @@
 @font-face {
-  font-family: "Acumin Pro";
-  src: url("./fonts/Acumin-ItPro.otf");
-  font-family: "Acumin Pro bold";
-  src: url("./fonts/Acumin-BdPro.otf");
-}
-
-body {
-  margin: 0;
-  font-family: "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+  font-family: "Gill Sans";
+  src: url("./fonts/Gill\ Sans\ Bold\ Italic.otf");
+  font-family: "Lato Thin";
+  src: url("./fonts/Lato-Thin.ttf");
 }
 
 .navbar {
@@ -28,213 +11,20 @@ code {
   top: 0;
   left: 0;
   right: 0;
-  font-family: "Acumin Pro bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-decoration: none;
   display: flex;
   justify-content: space-between;
   background-color: #dd4883;
   height: 8vh;
   width: 100%;
+  z-index: 1;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: black;
-}
-
-.links {
-  display: flex;
-  width: 30%;
-  margin-top: 4%;
-  margin-left: 16px;
-}
-
-.link {
-  margin-left: 90%;
-  margin-left: 2%;
-  margin-top: 1%;
-}
-
-.images {
-  display: flex;
-  justify-content: space-between;
-  margin-right: 2%;
-  width: 4vw;
-}
-
-.two {
-  display: flex;
-  justify-content: center;
-  margin-left: 2%;
-}
-
-.hide {
-  font-family: inherit;
-  font-size: 11px;
-  font-weight: bold;
-  color: dimgray;
-  line-height: 2;
-  padding: 20px 0;
-  text-transform: uppercase;
-  white-space: nowrap;
-  background-color: white;
-  display: none;
-  position: absolute;
-  right: 85px;
-  height: 60px;
-}
-
-.featured {
-  color: dimgray;
-}
-
-.featured,
-.branding {
-  font-size: 9px;
-  display: flex;
-  justify-content: center;
-}
-
-.branding {
-  text-decoration: underline;
-}
-
-.hide_two {
-  font-family: inherit;
-  font-size: 11px;
-  font-weight: bold;
-  color: dimgray;
-  line-height: 2;
-  padding: 20px 0;
-  text-transform: uppercase;
-  white-space: nowrap;
-  background-color: white;
-  position: absolute;
-  right: 40px;
-  top: 80px;
-  display: none;
-}
-
-.matches {
-  margin-top: 130px;
-}
-
-.match {
-  background-image: url("https://res.cloudinary.com/erezfriemagor/image/upload/v1622463601/n2nxgeuh750ao53dzuh4.jpg");
-}
-
-.image {
-  width: 400px;
-  height: 200px;
-  margin-bottom: 10px;
-  margin-left: 42px;
-  background-blend-mode: lighten;
-}
-
-.image_container {
-  display: flex;
-}
-
-.table {
-  border-top: none;
-}
-
-.cell {
-  position: relative;
-}
-
-.info {
-  position: absolute;
-  top: 20px;
-  left: 50px;
-  color: blue;
-}
-
-.pinfo {
-  color: white;
-}
-
-.ainfo {
-  color: yellow;
-  z-index: 2;
-  font-weight: bold;
-}
-
-.ldate {
-  color: white;
-}
-
-.pdate {
-  margin-left: 90px;
-  color: red;
-  font-size: 20px;
-}
-
-.table {
-  background-color: #dd4883;
-  margin-right: 60px;
-
-}
-
-.league  {
-  height: 100px;
-}
-
-.table td{
-  display: flex;
-  justify-content: space-between;
-}
-
-.page{
-  background-color: #dd4883;
-}
-
-.lname {
-  background-color: #dd4883;
-  height: 230px;
-}
-
-.ltitle {
-  margin-top: 100px;
-  margin-left: 230px;
-  color:  #f3afcb;
+body {
+  font-family: "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .views {
   margin-right: 35vw;
-}
-
-.leagues_list {
-  margin-top: 100px;
-  background-color: #fc5193;
-}
-
-.page {
-  margin-top: 60px;
-}
-
-.league_name {
-  position: absolute;
-  margin-left: 100px;
-  margin-top: 120px;
-  color: white;
-  text-decoration: none;
-}
-
-.leagues_table {
-  margin-top: 70px;
-  width: 100vw;
-}
-
-.league_card {
-  height: 45vh;
-  background-color: #fc5193;
-  position: relative;
-  margin-right: -5.5px;
-}
-
-table  {
-  width: 100%;
 }
 
 .lename {
@@ -246,20 +36,12 @@ table  {
 }
 
 .dark {
-  background-color: #dd4883;
+  background-color: #cd4377;
 }
 
-.limage {
-  width: 100px;
-}
-
-
-
-.ptitle {
-  position: absolute;
-  top: 200px;
-  left: 20px;
-  color: white;
+.bright {
+  background-color: #cf4278;
+  opacity: 0.95;
 }
 
 .table tr {
@@ -268,7 +50,7 @@ table  {
 
 .mcard {
   width: 100vw;
-  height: 12vh;
+  height: 15vh;
   color: white;
   font-size: 17px;
   display: flex;
@@ -293,17 +75,6 @@ table  {
   left: 55px;
 }
 
-.homepage {
-  background-color: #dd4883;
-}
-
-.back {
-  position: absolute;
-  font-size: 30px;
-  top: 20px;
-  left: 20px;
-  color: white;
-}
 
 .mdate {
   padding-right: 60px;
@@ -319,5 +90,41 @@ table  {
   margin-left: 20px;
 }
 
+.back {
+  color: white;
+  font-size: 20px;
+  margin-left: 20px;
+}
 
+.table {
+  background-color: #fb5092;
+}
 
+.leagues_list {
+  width: 100%;
+  margin-top: 70px;
+  margin-left: -1px;
+  border-spacing: 5px;
+}
+
+.league_card {
+  height: 20vh;
+  width: 50vw;
+}
+
+.adjust {
+  margin-right: -2px;
+  border-right: solid 0.1px  #fb5092;
+  border-top: solid 2px  #fb5092;
+  margin-top: -3px;
+  position: relative;
+  z-index: 1;
+}
+
+.area {
+  position: absolute;
+  color: white;
+  top: 120px;
+  right: 80px;
+  font-size: 25px;
+}

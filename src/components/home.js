@@ -7,78 +7,58 @@ import { NavLink } from 'react-router-dom';
 function Homepage() {
   return (
     <>
-      <div className="homepage">
-        <nav className="navbar">
-          <div className="views">Choose from best leagues</div>
-        </nav>
-        <table className="leagues_table container">
+      <nav className="navbar">
+        <div className="link">
+          <NavLink
+            to="/"
+          >
+            <div className="back"><i className="fas fa-chevron-right" /></div>
+          </NavLink>
+        </div>
+        <div className="views">League matches</div>
+      </nav>
+      <table className="leagues_list">
+        <thead>
           <tr>
             <th />
             <th />
           </tr>
+        </thead>
+        <tbody>
           <tr>
+            <td><div className="league_card bright adjust">Alfreds Futterkiste</div></td>
             <td>
-              <div className="link">
-                <NavLink
-                  className="back"
-                  to="/laliga"
-                >
-                  <div className="league_card dark">
-                    <div className="lename">
-                      <div>La liga</div>
-                      <img className="limage" src="https://res.cloudinary.com/erezfriemagor/image/upload/v1632229494/laliga-1534239805985.jpg" alt="laliga" />
-                    </div>
-                  </div>
-                </NavLink>
-              </div>
-            </td>
-            <td>
-              <div className="link">
-                <NavLink
-                  to="/priemier"
-                >
-                  <div className="league_card dark">
-                    <div className="lename">
-                      <div>Premier league</div>
-                      <img className="limage" src="https://res.cloudinary.com/erezfriemagor/image/upload/v1632316697/Premier_League_Logo.svg.png" alt="premier" />
-                    </div>
-                  </div>
-                </NavLink>
-              </div>
+              <div className="league_card dark">
+                <div className="area">Europe</div>
+              </div
+              >
             </td>
           </tr>
           <tr>
-            <td>
-              <div className="link">
-                <NavLink
-                  to="/seria"
-                >
-                  <div className="league_card dark">
-                    <div className="lename">
-                      <div>Seria A</div>
-                      <img className="limage" src="https://res.cloudinary.com/erezfriemagor/image/upload/v1632317862/italy-serie-a.png" alt="laliga" />
-                    </div>
-                  </div>
-                </NavLink>
-              </div>
-            </td>
             <td>
               <div className="link">
                 <NavLink
                   to="/laliga"
                 >
-                  <div className="league_card dark">
-                    <div className="lename">
-                      <div>La liga</div>
-                      <img className="limage" src="https://res.cloudinary.com/erezfriemagor/image/upload/v1632229494/laliga-1534239805985.jpg" alt="laliga" />
-                    </div>
+                  <div className="right_card">
+                    <div className="league_card dark adjust">
+                      <div className>La liga</div>
+                    </div
+              >
                   </div>
                 </NavLink>
               </div>
+
+            </td>
+            <td>
+              <div className="league_card bright adjust">
+                <div className>La liga</div>
+              </div
+              >
             </td>
           </tr>
-        </table>
-      </div>
+        </tbody>
+      </table>
 
     </>
 

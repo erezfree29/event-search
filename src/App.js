@@ -8,7 +8,7 @@ import { store } from './app/redux/store';
 import Premier from './components/Premier';
 import SeriaA from './components/SeriaA';
 import Homepage from './components/home';
-import LaLiga from './__test__/Laliga';
+import LaLiga from './components/Laliga';
 
 function App() {
   return (

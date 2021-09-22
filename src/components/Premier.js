@@ -29,7 +29,7 @@ function Premier() {
           <NavLink
             to="/"
           >
-            <div className="back">{'<'}</div>
+            <div className="back"><i className="fas fa-chevron-right" /></div>
           </NavLink>
         </div>
         <div className="views">League matches</div>
@@ -38,7 +38,7 @@ function Premier() {
         <div className="lename name"> premier League</div>
         <img className="image_top" src="https://res.cloudinary.com/erezfriemagor/image/upload/v1632316697/Premier_League_Logo.svg.png" alt="premier" />
       </div>
-      <table className=" table table-borderless table-striped up container">
+      <table className=" table table-borderless table-striped">
         <thead>
           <tr>
             <th scope="col" />
@@ -49,7 +49,7 @@ function Premier() {
             <tr>
               <td>
                 <div className="mcard">
-                  <div className="mtitle">{match.title}</div>
+                  <div>{match.title}</div>
                   <div className="mdate">
                     <div className="dword">Date</div>
                     <div>{match.date.slice(0, 10)}</div>

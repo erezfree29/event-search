@@ -52,6 +52,3 @@ function SeriaA() {
   );
 }
 export default SeriaA;
-
-
-
