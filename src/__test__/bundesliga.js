@@ -3,7 +3,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useEffect } from 'react';
 
-import { updateLaLiga } from '../app/redux/laliga';
+import { updateBLiga } from '../app/redux/bumdesliga';
 
 function LaLiga() {
   const dispatch = useDispatch();
@@ -11,8 +11,8 @@ function LaLiga() {
   const fetchItems = async () => {
     const data = await fetch('https://www.scorebat.com/video-api/v3/');
     const matchesJason = await data.json();
-    const matches = matchesJason.response.filter((match) => match.competition === 'SPAIN: La Liga');
-    dispatch(updateLaLiga(matches));
+    const matches = matchesJason.response.filter((match) => match.competition === 'GERMANY: Bundesliga');
+    dispatch(updateBLiga(matches));
   };
 
   useEffect(() => {

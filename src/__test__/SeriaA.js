@@ -3,22 +3,20 @@
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useEffect } from 'react';
 
-import { updateLaLiga } from '../app/redux/laliga';
+import { updateSeriaA } from '../app/redux/seriaA';
 
-function LaLiga() {
+function SeriaA() {
   const dispatch = useDispatch();
-  const storeMatches = useSelector((state) => state.laLigaReducer);
+  const storeMatches = useSelector((state) => state.seriaReducer);
   const fetchItems = async () => {
     const data = await fetch('https://www.scorebat.com/video-api/v3/');
     const matchesJason = await data.json();
-    const matches = matchesJason.response.filter((match) => match.competition === 'SPAIN: La Liga');
-    dispatch(updateLaLiga(matches));
+    const matches = matchesJason.response.filter((match) => match.competition === 'ITALY: Serie A');
+    dispatch(updateSeriaA(matches));
   };
 
   useEffect(() => {
-    if (storeMatches.length === 0) {
-      fetchItems();
-    }
+    fetchItems();
   }, []);
 
   return (
@@ -38,9 +36,9 @@ function LaLiga() {
             <a href={match.matchviewUrl}>
               <td className="cell">
                 <img className="image" id={match} src={match.thumbnail} alt="match" />
-                <div className="info">
+                <div className="info ainfo">
                   <h5 className="title">{match.title}</h5>
-                  <div className="ldate">{match.date.slice(0, 10)}</div>
+                  <div>{match.date.slice(0, 10)}</div>
                 </div>
               </td>
             </a>
@@ -52,4 +50,4 @@ function LaLiga() {
 
   );
 }
-export default LaLiga;
+export default SeriaA;

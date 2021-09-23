@@ -8,7 +8,7 @@ import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './store';
-import Premier from '../components/Premier';
+import Premier from './premier';
 import '@testing-library/jest-dom/extend-expect';
 
 describe('check if all component are rendered', () => {

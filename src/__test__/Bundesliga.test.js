@@ -8,12 +8,12 @@ import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './store';
-import SeriaA from './SeriaA';
+import Bundesliga from './bundesliga';
 import '@testing-library/jest-dom/extend-expect';
 
 describe('check if all component are rendered', () => {
   it('renders page correctly', () => {
-    const tree = render(<Provider store={store}><Router><SeriaA /></Router></Provider>);
+    const tree = render(<Provider store={store}><Router><Bundesliga /></Router></Provider>);
     expect(tree).toMatchSnapshot();
   });
 });
