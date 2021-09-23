@@ -46,3 +46,10 @@
 
 
       GERMANY: Bundesliga
+
+
+      <td>
+        <div className="league_card bright adjust border">
+          <img className="europe" src="https://res.cloudinary.com/erezfriemagor/image/upload/v1632344073/black-map-europe-countries-white-background-vector-illustration-149712794.jpg" alt="europe" />
+        </div>
+      </td>

@@ -109,6 +109,7 @@ body {
   margin-top: 70px;
   margin-left: -1px;
   border-spacing: 5px;
+   background-color: #fb5092;
 }
 
 .league_card {
@@ -152,9 +153,10 @@ body {
   font-size: 25px;
 }
 
-.states {
+.states_row {
+  background-color: #cd4377;
+  border-top: 2px solid #cd4377;
   color: #f3afcb;
-  text-decoration: none;
 }
 
 .leagues_list a {
@@ -163,7 +165,6 @@ body {
 
 .arrow_home{
   position: absolute;
-  color: white;
   right: 3px;
   top: 20px;
 }
@@ -194,4 +195,49 @@ body {
 .move_down {
   top: 310px;
   left: 245px;
+}
+
+.border {
+  margin-bottom: -6px;
+}
+.states {
+  margin-left: 5px;
+}
+
+.arrow_home::before{
+  color: white;
+}
+
+.adjust_matches {
+  position: absolute;
+  right: 20px;
+}
+
+.pmatches {
+  position: absolute;
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  top:250px;
+  right: 90px;
+}
+
+.sematches
+{
+  position: absolute;
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  top:210px;
+  right: 90px;
+}
+
+.sematches
+{
+  position: absolute;
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  top:210px;
+  right: 90px;
 }
