@@ -6,21 +6,22 @@ import { NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useEffect } from 'react';
 
-import { updateState } from '../app/redux/premer';
+import { updateSeriaA } from '../app/redux/seriaA';
 
 function SeriaA() {
   const dispatch = useDispatch();
-  const storeMatches = useSelector((state) => state.premierReducer);
+  const seMatches = useSelector((state) => state.seriaReducer);
   const fetchItems = async () => {
     const data = await fetch('https://www.scorebat.com/video-api/v3/');
     const matchesJason = await data.json();
-    console.log(matchesJason);
-    const matches = matchesJason.response.filter((match) => match.competition === 'ITALY: Serie A');
-    dispatch(updateState(matches));
+    const seMatchesA = matchesJason.response.filter((match) => match.competition === 'ITALY: Serie A');
+    dispatch(updateSeriaA(seMatchesA));
   };
 
   useEffect(() => {
-    fetchItems();
+    if (seMatches.length === 0) {
+      fetchItems();
+    }
   }, []);
 
   return (
@@ -35,9 +36,11 @@ function SeriaA() {
         </div>
         <div className="views">League matches</div>
       </nav>
+      <div className="hand move_down bhand"><i className="fas fa-hand-point-up" /></div>
+      <div className="breakdwon">League team Breakdown 2021</div>
       <div className="league_top">
         <div className="lename name">  Serie A</div>
-        <img className="image_top" src="https://res.cloudinary.com/erezfriemagor/image/upload/v1632317862/italy-serie-a.png" alt="la_liga" />
+        <img className="image_top image_s" src="https://res.cloudinary.com/erezfriemagor/image/upload/v1632317862/italy-serie-a.png" alt="la_liga" />
       </div>
       <table className=" table table-borderless table-striped">
         <thead>
@@ -46,7 +49,7 @@ function SeriaA() {
           </tr>
         </thead>
         <tbody>
-          {storeMatches.map((match) => (
+          {seMatches.map((match) => (
             <tr>
               <td>
                 <a href={match.matchviewUrl}>

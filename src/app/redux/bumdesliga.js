@@ -1,13 +1,13 @@
 /* eslint-disable import/prefer-default-export */
-const SET_MATCHES = 'laliga/GET_LALIGA';
+const SET_MATCHES = 'bundesliga/GET_BUNDESLIGA';
 const initialState = [];
 
-export const updateLaLiga = (payload) => ({
+export const updateBLiga = (payload) => ({
   type: SET_MATCHES,
   payload,
 });
 
-const laLigaReducer = (state = initialState, action) => {
+const bundesLigaReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_MATCHES:
       return action.payload;
@@ -16,4 +16,4 @@ const laLigaReducer = (state = initialState, action) => {
   }
 };
 
-export default laLigaReducer;
+export default bundesLigaReducer;

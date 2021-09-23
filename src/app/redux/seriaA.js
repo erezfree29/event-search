@@ -1,8 +1,8 @@
 /* eslint-disable import/prefer-default-export */
-const SET_MATCHES = 'matchStore/matches/GET_MATCHES';
+const SET_MATCHES = 'sertia/GET_SERIAA';
 const initialState = [];
 
-export const updateState = (payload) => ({
+export const updateSeriaA = (payload) => ({
   type: SET_MATCHES,
   payload,
 });

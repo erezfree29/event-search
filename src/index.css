@@ -100,6 +100,10 @@ body {
   margin-left: 20px;
 }
 
+nav a {
+  text-decoration: none;
+}
+
 .table {
   background-color: #fb5092;
 }
@@ -240,4 +244,19 @@ body {
   font-size: 30px;
   top:210px;
   right: 90px;
+}
+.breakdwon {
+  background-color: #cd4377;
+  position: absolute;
+  top: 230px;
+  width: 100%;
+}
+
+.image_s {
+  position: absolute;
+  top: 90px;
+}
+
+.bhand {
+  top: 330px;
 }

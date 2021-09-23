@@ -6,20 +6,22 @@ import { NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useEffect } from 'react';
 
-import { updateState } from '../app/redux/premer';
+import { updateBLiga } from '../app/redux/bumdesliga';
 
 function Bundesliga() {
   const dispatch = useDispatch();
-  const storeMatches = useSelector((state) => state.premierReducer);
+  const bmatches = useSelector((state) => state.bundesLigaReducer);
   const fetchItems = async () => {
     const data = await fetch('https://www.scorebat.com/video-api/v3/');
     const matchesJason = await data.json();
-    const matches = matchesJason.response.filter((match) => match.competition === 'GERMANY: Bundesliga');
-    dispatch(updateState(matches));
+    const bundesMatches = matchesJason.response.filter((match) => match.competition === 'GERMANY: Bundesliga');
+    dispatch(updateBLiga(bundesMatches));
   };
 
   useEffect(() => {
-    fetchItems();
+    if (bmatches.length === 0) {
+      fetchItems();
+    }
   }, []);
 
   return (
@@ -34,6 +36,8 @@ function Bundesliga() {
         </div>
         <div className="views">League matches</div>
       </nav>
+      <div className="hand move_down bhand"><i className="fas fa-hand-point-up" /></div>
+      <div className="breakdwon">League team Breakdown 2021</div>
       <div className="bundes_liga">
         <div className="league_top">
           <div className="lename name"> Bundesliga</div>
@@ -46,7 +50,7 @@ function Bundesliga() {
             </tr>
           </thead>
           <tbody>
-            {storeMatches.map((match) => (
+            {bmatches.map((match) => (
               <tr>
                 <td>
                   <a href={match.matchviewUrl}>

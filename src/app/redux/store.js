@@ -10,10 +10,13 @@ import premierReducer from './premer';
 
 import seriaReducer from './seriaA';
 
+import bundesLigaReducer from './bumdesliga';
+
 const reducer = combineReducers({
   laLigaReducer,
   premierReducer,
   seriaReducer,
+  bundesLigaReducer,
 });
 
 export const store = createStore(

@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 /* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable react/jsx-key */
@@ -6,22 +7,24 @@ import { NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useEffect } from 'react';
 
-import { updateState } from '../app/redux/premer';
+import { updateLaLiga } from '../app/redux/laliga';
 
 function Laliga() {
   const dispatch = useDispatch();
-  const storeMatches = useSelector((state) => state.premierReducer);
   const fetchItems = async () => {
     const data = await fetch('https://www.scorebat.com/video-api/v3/');
     const matchesJason = await data.json();
-    console.log(matchesJason);
-    const matches = matchesJason.response.filter((match) => match.competition === 'SPAIN: La Liga');
-    dispatch(updateState(matches));
+    const laLigaMatches = matchesJason.response.filter((match) => match.competition === 'SPAIN: La Liga');
+    dispatch(updateLaLiga(laLigaMatches));
   };
 
   useEffect(() => {
-    fetchItems();
+    if (lmatches.length === 0) {
+      fetchItems();
+    }
   }, []);
+
+  const lmatches = useSelector((state) => state.laLigaReducer);
 
   return (
     <>
@@ -35,6 +38,8 @@ function Laliga() {
         </div>
         <div className="views">League matches</div>
       </nav>
+      <div className="hand move_down"><i className="fas fa-hand-point-up" /></div>
+      <div className="breakdwon">League team Breakdown 2021</div>
       <div className="league_top">
         <div className="lename name"> La Liga</div>
         <img className="image_top" src="https://res.cloudinary.com/erezfriemagor/image/upload/v1632229494/laliga-1534239805985.jpg" alt="la_liga" />
@@ -46,7 +51,7 @@ function Laliga() {
           </tr>
         </thead>
         <tbody>
-          {storeMatches.map((match) => (
+          {lmatches.map((match) => (
             <tr>
               <td>
                 <a href={match.matchviewUrl}>
