@@ -27,6 +27,10 @@ body {
   margin-right: 35vw;
 }
 
+nav a {
+  text-decoration: none;
+}
+
 .lename {
   position: absolute;
   top: 120px;
@@ -74,11 +78,10 @@ body {
 
 .image_top {
   top: 130px;
-  position:absolute;
+  position: absolute;
   width: 130px;
   left: 55px;
 }
-
 
 .mdate {
   padding-right: 60px;
@@ -89,8 +92,7 @@ body {
   margin-right: 5px;
 }
 
-.fa-arrow-circle-right
-{
+.fa-arrow-circle-right {
   margin-left: 20px;
 }
 
@@ -98,10 +100,6 @@ body {
   color: white;
   font-size: 20px;
   margin-left: 20px;
-}
-
-nav a {
-  text-decoration: none;
 }
 
 .table {
@@ -113,7 +111,7 @@ nav a {
   margin-top: 70px;
   margin-left: -1px;
   border-spacing: 5px;
-   background-color: #fb5092;
+  background-color: #fb5092;
 }
 
 .league_card {
@@ -150,7 +148,6 @@ nav a {
 
 .league_name {
   color: white;
-  font-size: 20px;
   position: absolute;
   left: 115px;
   top: 180px;
@@ -167,7 +164,7 @@ nav a {
   text-decoration: none;
 }
 
-.arrow_home{
+.arrow_home {
   position: absolute;
   right: 3px;
   top: 20px;
@@ -181,8 +178,7 @@ nav a {
   opacity: 0.2;
 }
 
-.bundes_liga
-{
+.bundes_liga {
   height: 100vh;
   background-color: #fb5092;
   opacity: 1;
@@ -204,11 +200,12 @@ nav a {
 .border {
   margin-bottom: -6px;
 }
+
 .states {
   margin-left: 5px;
 }
 
-.arrow_home::before{
+.arrow_home::before {
   color: white;
 }
 
@@ -222,29 +219,19 @@ nav a {
   color: white;
   text-decoration: none;
   font-size: 30px;
-  top:250px;
+  top: 250px;
   right: 90px;
 }
 
-.sematches
-{
+.sematches {
   position: absolute;
   color: white;
   text-decoration: none;
   font-size: 30px;
-  top:210px;
+  top: 210px;
   right: 90px;
 }
 
-.sematches
-{
-  position: absolute;
-  color: white;
-  text-decoration: none;
-  font-size: 30px;
-  top:210px;
-  right: 90px;
-}
 .breakdwon {
   background-color: #cd4377;
   position: absolute;
