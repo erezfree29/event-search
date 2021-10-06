@@ -1,13 +1,249 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Gill Sans";
+  src: url("./fonts/Gill\ Sans\ Bold\ Italic.otf");
+  font-family: "Lato Thin";
+  src: url("./fonts/Lato-Thin.ttf");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar {
+  position: fixed;
+  color: #f3afcb;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #dd4883;
+  height: 8vh;
+  width: 100%;
+  z-index: 2;
+}
+
+body {
+  font-family: "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.views {
+  margin-right: 35vw;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.lename {
+  position: absolute;
+  top: 120px;
+  left: 90px;
+  color: white;
+  font-size: 30px;
+}
+
+.dark {
+  background-color: #cd4377;
+}
+
+.bright {
+  background-color: #cf4278;
+  opacity: 0.95;
+}
+
+.table tr {
+  width: 100vw;
+}
+
+.table a {
+  text-decoration: none;
+}
+
+.mcard {
+  width: 100vw;
+  height: 15vh;
+  color: white;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.league_top {
+  background-color: #fb5092;
+  height: 45vw;
+  margin-bottom: 0.01vw;
+}
+
+.name {
+  margin-left: 160px;
+}
+
+.image_top {
+  top: 130px;
+  position: absolute;
+  width: 130px;
+  left: 55px;
+}
+
+.mdate {
+  padding-right: 60px;
+  display: flex;
+}
+
+.dword {
+  margin-right: 5px;
+}
+
+.fa-arrow-circle-right {
+  margin-left: 20px;
+}
+
+.back {
+  color: white;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.table {
+  background-color: #fb5092;
+}
+
+.leagues_list {
+  width: 100%;
+  margin-top: 70px;
+  margin-left: -1px;
+  border-spacing: 5px;
+  background-color: #fb5092;
+}
+
+.league_card {
+  height: 31vh;
+  width: 48vw;
+  position: relative;
+}
+
+.adjust {
+  margin-right: -2px;
+  border-right: solid 0.1px  #fb5092;
+  border-top: solid 2px  #fb5092;
+  margin-top: -4px;
+  position: relative;
+  z-index: 1;
+}
+
+.area {
+  position: absolute;
+  color: white;
+  top: 120px;
+  right: 80px;
+  font-size: 25px;
+}
+
+.europe {
+  width: 130px;
+  opacity: 0.1;
+  background-color: #fb5092;
+  position: absolute;
+  left: 110px;
+  top: 90px;
+}
+
+.league_name {
+  color: white;
+  position: absolute;
+  left: 115px;
+  top: 180px;
+  font-size: 25px;
+}
+
+.states_row {
+  background-color: #cd4377;
+  border-top: 2px solid #cd4377;
+  color: #f3afcb;
+}
+
+.leagues_list a {
+  text-decoration: none;
+}
+
+.arrow_home {
+  position: absolute;
+  right: 3px;
+  top: 20px;
+}
+
+.league_list_image {
+  width: 120px;
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  opacity: 0.2;
+}
+
+.bundes_liga {
+  height: 100vh;
+  background-color: #fb5092;
+  opacity: 1;
+}
+
+.hand {
+  color: black;
+  font-size: 45px;
+  position: absolute;
+  top: 180px;
+  left: 60px;
+}
+
+.move_down {
+  top: 310px;
+  left: 245px;
+}
+
+.border {
+  margin-bottom: -6px;
+}
+
+.states {
+  margin-left: 5px;
+}
+
+.arrow_home::before {
+  color: white;
+}
+
+.adjust_matches {
+  position: absolute;
+  right: 20px;
+}
+
+.pmatches {
+  position: absolute;
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  top: 250px;
+  right: 90px;
+}
+
+.sematches {
+  position: absolute;
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  top: 210px;
+  right: 90px;
+}
+
+.breakdwon {
+  background-color: #cd4377;
+  position: absolute;
+  top: 230px;
+  width: 100%;
+}
+
+.image_s {
+  position: absolute;
+  top: 90px;
+}
+
+.bhand {
+  top: 330px;
 }

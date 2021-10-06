@@ -1,44 +1,90 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Metrics-web app
 
-## Available Scripts
+This is a final capstone project app.
 
-In the project directory, you can run:
+The app fetches information from the https://www.scorebat.com API.
 
-### `npm start`
+It displays recent matches of Europe's top leagues, clicking on an image will link the user to a video of the match.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Additional description of the project and its features.
 
-### `npm test`
+## 🔴  Live Demo
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Metrics-webapp](https://wizardly-kilby-57b112.netlify.app/)
 
-### `npm run build`
+## Project Overview Video
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Watch Here](https://www.loom.com/share/83001f604bd04a51a28fd19b935d4727)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Built with
 
-### `npm run eject`
+-   React
+-   Redux
+-   Java scripts ES6
+-   NPM
+-   WEBPACK
+-   HTML
+-   CSS
+-   vscode
+-   Lots of love :heart:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Installation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+you need to make sure you have the following on your machine
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+first, make sure you have Nodejs and Npm installed on your local machine 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[How to Install Node.js and npm on Ubuntu 18.04](https://linuxize.com/post/how-to-install-node-js-on-ubuntu-18.04/)
 
-## Learn More
+alternatively to installing npm is to install 'yarn' 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> 1. run `git clone https://github.com/erezfree29/Metrics-webapp/`
+> 2. run `cd Metrics-webapp`
+> 3. type npm install / or yarn install.
+> 4. type npm start 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+### testing
+
+> 1. I have used the 'jest' testing Library.
+> 2. The jest package is listed in the project's package, Jason.
+> 3. Once you run npm install simply type jest and it will run the tests 
+
+## Author
+
+👤 **Erez Friemagor**
+
+[<code><img height="26" src="https://cdn.iconscout.com/icon/free/png-256/github-153-675523.png"></code>](https://github.com/erezfree29)
+[<code><img height="26" src="https://upload.wikimedia.org/wikipedia/sco/thumb/9/9f/Twitter_bird_logo_2012.svg/1200px-Twitter_bird_logo_2012.svg.png"></code>](https://twitter.com/friemagor?lang=en)
+[<code><img height="26" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/1200px-Linkedin.svg.png"></code>](https://www.linkedin.com/in/erez-friemagor/?originalSubdomain=uk)
+<a href="mailto:erezfree29@gmail.com?subject=Hey Erez!"><img height="26" src="https://cdn.worldvectorlogo.com/logos/official-gmail-icon-2020-.svg"></a>
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues](https://github.com/erezfree29/Metrics-webapp/issues)
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+-   Microverse
+-   The Odin Project
+
+## Design
+
+I have a design created by 
+- Nelson Sakwa, User Interface Designer
+- Sakwa Design Studio Nairobi, Kenya 
+- sakwadesign.com
+
+## 📝 MIT License
+
+This project makes use of the MIT license.
+
+
