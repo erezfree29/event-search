@@ -5,30 +5,23 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import { store } from './app/redux/store';
-import Premier from './components/Premier';
-import SeriaA from './components/SeriaA';
+import { Helmet } from 'react-helmet';
+import { store } from './redux/store';
 import Homepage from './components/home';
-import LaLiga from './components/Laliga';
-import Bundesliga from './components/Bundesliga';
+import Recipes from './components/recepies';
 
 function App() {
   return (
     <Provider store={store}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>My Title</title>
+      </Helmet>
       <Router>
         <div className="App">
           <Switch>
-            <Route exact path="/bundes">
-              <Bundes />
-            </Route>
-            <Route path="/priemier">
-              <Pleague />
-            </Route>
-            <Route path="/seria">
-              <Sera />
-            </Route>
-            <Route exact path="/laliga">
-              <La />
+            <Route path="/recipes">
+              <Recipes />
             </Route>
             <Route exact path="/">
               <Home />
@@ -40,24 +33,8 @@ function App() {
   );
 }
 
-function Pleague() {
-  return <Premier />;
-}
-
-function Sera() {
-  return <SeriaA />;
-}
-
 function Home() {
   return <Homepage />;
-}
-
-function La() {
-  return <LaLiga />;
-}
-
-function Bundes() {
-  return <Bundesliga />;
 }
 
 export default App;
