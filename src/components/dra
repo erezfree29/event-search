@@ -5,4 +5,44 @@
 
 
 
+2: "Mediterranean"
+3: "Gluten-Free"
+4: "Wheat-Free"
+5: "Egg-Free"
+6: "Peanut-Free"
+7: "Tree-Nut-Free"
+8: "Soy-Free"
+9: "Fish-Free"
+10: "Shellfish-Free"
+11: "Pork-Free"
+12: "Red-Meat-Free"
+13: "Crustacean-Free"
+14: "Celery-Free"
+15: "Mustard-Free"
+16: "Sesame-Free"
+17: "Lupine-Free"
+18: "Mollusk-Free"
+19: "Alcohol-Free"
+20: "No oil added"
+21: "Sulfite-Free"
+22: "Kosher"
 
+
+
+
+ <div className="col -5">
+            <div className="form-check d-flex">
+              <input className="form-check-input" type="checkbox" value="" id="egg-Free" />
+              <label className="form-check-label p-1" htmlFor="defaultCheck1" />
+              Egg-Free
+            </div>
+          </div>
+
+
+           <div className="col -5">
+            <div className="form-check d-flex">
+              <input className="form-check-input" type="checkbox" value="" id="pork-Free" />
+              <label className="form-check-label p-1" htmlFor="defaultCheck1" />
+              pork-Free
+            </div>
+          </div>

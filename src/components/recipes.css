@@ -1,0 +1,28 @@
+label {
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+form {
+  margin-bottom: 10%;
+}
+
+.label_name {
+  position: absolute;
+  top: 105px;
+  left: 80px;
+  color: green;
+  font-size: 25px;
+}
+
+.dish {
+  position: relative;
+}
+
+.form-check-label {
+  margin-right: -10px !important;
+}
+
+#calories {
+  width: 75% !important;
+}
