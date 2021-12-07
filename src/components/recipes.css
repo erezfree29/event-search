@@ -31,22 +31,12 @@ form {
   margin-right: 2%;
 }
 
-.carousel {
-  position: absolute;
-  bottom: 150px;
-}
-
 .dish img {
   width: 150%;
-  height: 300px;
+  height: px;
 }
 
 @media screen and (max-width: 768px) {  
-  .carousel {
-    position: absolute;
-    bottom: 10px;
-  }
-
   .label_name {
   position: absolute;
   top: 80px;
