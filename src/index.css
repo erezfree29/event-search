@@ -247,3 +247,78 @@ nav a {
 .bhand {
   top: 330px;
 }
+
+label {
+  margin-top: 2%;
+}
+
+form {
+  margin-bottom: 10%;
+}
+
+.label_name {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  color: green;
+  font-size: 35px;
+}
+
+.dish {
+  position: relative;
+}
+
+.form-check-label {
+  margin-right: -10px !important;
+}
+
+#calories {
+  width: 25% !important;
+}
+
+#query {
+  width: 25% !important;
+  margin-right: 2%;
+}
+
+.carousel {
+  position: absolute;
+  bottom: 150px;
+}
+
+.dish img {
+  width: 150%;
+  height: 300px;
+}
+
+@media screen and (max-width: 768px) {  
+  .carousel {
+    position: absolute;
+    bottom: 10px;
+  }
+
+  .label_name {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  color: green;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+label {
+  margin-left: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
