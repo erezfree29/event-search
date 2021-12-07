@@ -2,10 +2,6 @@ label {
   margin-top: 2%;
 }
 
-form {
-  margin-bottom: 10%;
-}
-
 .label_name {
   position: absolute;
   top: 80px;
@@ -32,8 +28,12 @@ form {
 }
 
 .dish img {
-  width: 150%;
-  height: px;
+  width: 170%;
+  height: 250px;
+}
+
+form {
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 768px) {  
