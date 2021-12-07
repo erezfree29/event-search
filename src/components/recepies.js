@@ -1,3 +1,5 @@
+/* eslint-disable no-empty */
+/* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable react/jsx-indent */
 /* eslint-disable no-alert */
 /* eslint-disable jsx-a11y/alt-text */
@@ -114,26 +116,33 @@ function Recipes() {
       recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes("Kosher"));
     }
     setRecipes(recipes);
+    localStorage.setItem('recipes', JSON.stringify(recipes));
   };
 
   const onSubmit = (e) => {
     fetchItems();
-    console.log(recipes);
     e.preventDefault();
   };
 
   useEffect(() => {
+    if (localStorage.getItem('recipes') !== null) {
+      const storedNames = JSON.parse(localStorage.getItem("recipes"));
+      setRecipes(storedNames);
+    }
   }, []);
 
   return (
     <div>
+      <div className="d-flex justify-content-center"><h1>Find Your Recipe</h1></div>
       <div className="recepies">
         <form onSubmit={onSubmit} className="p-3">
           <div className="form-group">
-            <label htmlFor="search_field"> Search</label>
-            <input type="text" className="form-control w-75" id="query" placeholder="search" />
+            <div className="input_button d-flex">
+              <input type="text" className="form-control" id="query" placeholder="search" />
+              <button type="submit" className="btn btn-primary">Find</button>
+            </div>
             <label htmlFor="select_field">Maximum Calories</label>
-            <select className="form-select" aria-label="Default select example w-75" id="calories">
+            <select className="form-select" aria-label="Default select example" id="calories">
               <option selected>any</option>
               <option value="300">300</option>
               <option value="500">500</option>
@@ -311,21 +320,22 @@ function Recipes() {
             </div>
           </div>
           </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
         </form>
+        <div className="carousel">
         <Carousel>
           {recipes.map((recipe) => (
             <>
               <div className="dish">
                 <div className="label_name">{recipe.recipe.label}</div>
                 <div>
-                  <img src={recipe.recipe.image} />
+                  <a href={recipe.recipe.url}><img src={recipe.recipe.image} /></a>
                 </div>
               </div>
             </>
           ))}
 
         </Carousel>
+        </div>
 
       </div>
     </div>

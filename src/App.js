@@ -7,7 +7,6 @@ import {
 } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { store } from './redux/store';
-import Homepage from './components/home';
 import Recipes from './components/recepies';
 
 function App() {
@@ -20,9 +19,6 @@ function App() {
       <Router>
         <div className="App">
           <Switch>
-            <Route path="/recipes">
-              <Recipes />
-            </Route>
             <Route exact path="/">
               <Home />
             </Route>
@@ -34,7 +30,7 @@ function App() {
 }
 
 function Home() {
-  return <Homepage />;
+  return <Recipes />;
 }
 
 export default App;
