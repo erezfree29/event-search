@@ -328,7 +328,7 @@ function Recipes() {
               <div className="dish">
                 <div className="label_name">{recipe.recipe.label}</div>
                 <div>
-                  <a href={recipe.recipe.url}><img src={recipe.recipe.image} /></a>
+                  <a href={recipe.recipe.url}><img src={recipe.recipe.image} className="d-flex" /></a>
                 </div>
               </div>
             </>
