@@ -116,7 +116,6 @@ function Recipes() {
       recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes("Kosher"));
     }
     setRecipes(recipes);
-    localStorage.setItem('recipes', JSON.stringify(recipes));
   };
 
   const onSubmit = (e) => {
@@ -125,10 +124,6 @@ function Recipes() {
   };
 
   useEffect(() => {
-    if (localStorage.getItem('recipes') !== null) {
-      const storedNames = JSON.parse(localStorage.getItem("recipes"));
-      setRecipes(storedNames);
-    }
   }, []);
 
   return (

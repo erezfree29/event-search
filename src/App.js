@@ -14,7 +14,7 @@ function App() {
     <Provider store={store}>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>My Title</title>
+        <title>Recipe App</title>
       </Helmet>
       <Router>
         <div className="App">
