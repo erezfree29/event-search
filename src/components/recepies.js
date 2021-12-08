@@ -116,7 +116,6 @@ function Recipes() {
       recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes("Kosher"));
     }
     setRecipes(recipes);
-    console.log(recipes);
     localStorage.setItem('recipes', JSON.stringify(recipes));
   };
 
