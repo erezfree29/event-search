@@ -116,11 +116,13 @@ function Recipes() {
       recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes("Kosher"));
     }
     setRecipes(recipes);
+    console.log(recipes);
     localStorage.setItem('recipes', JSON.stringify(recipes));
   };
 
   const onSubmit = (e) => {
     fetchItems();
+    document.querySelector('.carousel').style.setProperty("display", "block", "important");
     e.preventDefault();
   };
 
@@ -128,6 +130,8 @@ function Recipes() {
     if (localStorage.getItem('recipes') !== null) {
       const storedNames = JSON.parse(localStorage.getItem("recipes"));
       setRecipes(storedNames);
+    } else {
+      document.querySelector('.carousel').style.setProperty("display", "none", "important");
     }
   }, []);
 
@@ -326,11 +330,22 @@ function Recipes() {
           {recipes.map((recipe) => (
             <>
               <div className="dish">
+                <div>click to see the recipe</div>
                 <div className="label_name">{recipe.recipe.label}</div>
                 <div>
                   <a href={recipe.recipe.url}><img src={recipe.recipe.image} className="d-flex" /></a>
                 </div>
               </div>
+              {recipe.recipe.cautions.length > 0
+        && (
+
+          <div>
+          cautions-
+          {`  ${recipe.recipe.cautions}`}
+          </div>
+
+        )}
+
             </>
           ))}
 
