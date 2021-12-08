@@ -125,6 +125,10 @@ function Recipes() {
   };
 
   useEffect(() => {
+    if (localStorage.getItem('recipes') !== null) {
+      const storedNames = JSON.parse(localStorage.getItem("recipes"));
+      setRecipes(storedNames);
+    }
   }, []);
 
   return (
