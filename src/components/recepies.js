@@ -42,11 +42,6 @@ function Recipes() {
       url = beginUrl + keyWord + endUrl;
     }
 
-    // if (document.getElementById('theatre').checked) {
-    //   endUrl = `&classificationName=theatre&${endUrl}`;
-    //   url = beginUrl + keyWord + endUrl;
-    // }
-
     if (document.getElementById('art').checked) {
       endUrl = `&classificationName=art&${endUrl}`;
       url = beginUrl + keyWord + endUrl;
@@ -67,15 +62,27 @@ function Recipes() {
       url = beginUrl + keyWord + endUrl;
     }
 
-    /* eslint-disable-next-line no-console */
-    console.log(url);
+    if (document.getElementById('dance').checked) {
+      endUrl = `&classificationName=dance&${endUrl}`;
+      url = beginUrl + keyWord + endUrl;
+    }
+
+    if (document.getElementById('special').checked) {
+      endUrl = `&classificationName=special&${endUrl}`;
+      url = beginUrl + keyWord + endUrl;
+    }
+
+    if (document.getElementById('tribute').checked) {
+      endUrl = `&classificationName=tribute&${endUrl}`;
+      url = beginUrl + keyWord + endUrl;
+    }
 
     const data = await fetch(url);
     /* eslint-disable-next-line no-console */
     const eventsJason = await data.json();
-    /* eslint-disable-next-line no-console */
-    console.log(eventsJason._embedded);
     const { events } = eventsJason._embedded;
+    /* eslint-disable-next-line no-console */
+    console.log(events);
     setEvents(events);
     /* eslint-disable-next-line no-console */
     localStorage.setItem('events', JSON.stringify(events));
@@ -88,12 +95,12 @@ function Recipes() {
   };
 
   useEffect(() => {
-    // if (localStorage.getItem('recipes') !== null) {
-    //   const storedNames = JSON.parse(localStorage.getItem("recipes"));
-    //   setRecipes(storedNames);
-    // } else {
-    //   document.querySelector('.carousel').style.setProperty("display", "none", "important");
-    // }
+    if (localStorage.getItem('events') !== null) {
+      const storedNames = JSON.parse(localStorage.getItem("events"));
+      setEvents(storedNames);
+    } else {
+      document.querySelector('.carousel').style.setProperty("display", "none", "important");
+    }
   }, []);
 
   return (
@@ -123,64 +130,76 @@ function Recipes() {
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="col-6">
-              <div className="form-check d-flex">
-                <input className="form-check-input" type="checkbox" value="" id="music" />
-                <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-                Music
-              </div>
-            </div>
-            <div className="col-6">
-              <div className="form-check d-flex">
-                <input className="form-check-input" type="checkbox" value="" id="sports" />
-                <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-                Sports
-              </div>
-            </div>
-            <div className="col-6">
-              <div className="form-check d-flex">
-                <input className="form-check-input" type="checkbox" value="" id="film" />
-                <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-                Film
-              </div>
-            </div>
-            <div className="col-6">
-              <div className="form-check d-flex">
-                <input className="form-check-input" type="checkbox" value="" id="art" />
-                <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-                Art
-              </div>
-            </div>
-            <div className="col-6">
-              <div className="form-check d-flex">
-                <input className="form-check-input" type="checkbox" value="" id="festival" />
-                <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-                Festival
-              </div>
-            </div>
-            <div className="col-6">
-              <div className="form-check d-flex">
-                <input className="form-check-input" type="checkbox" value="" id="comedy" />
-                <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-                Comedy
-              </div>
-            </div>
-            <div className="col-6">
-              <div className="form-check d-flex">
-                <input className="form-check-input" type="checkbox" value="" id="talk" />
-                <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-                Talk
-              </div>
-            </div>
-            <div className="col-6">
-              <div className="form-check d-flex">
-                <input className="form-check-input" type="checkbox" value="" id="theatre" />
-                <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-                Theatre
-              </div>
-            </div>
-          </div>
+<div className="choice d-flex justify-content-center">
+                    <div className="browse d-flex justify-content-between">
+
+                        <div className="mr-5">
+                            <div>
+
+                                <input className="mr-1" type="checkbox" value="2" name="c" id="dance" />
+                                <label htmlFor="category-2">Dance And Clubs</label>
+
+                            </div>
+                            <div>
+
+                                <input className="mr-1" type="checkbox" value="3" name="c" id="music" />
+                                <label htmlFor="category-3">Music</label>
+
+                            </div>
+                            <div>
+
+                                <input className="mr-1" type="checkbox" value="5" name="c" id="tribute" />
+                                <label htmlFor="category-5">Tribute</label>
+
+                            </div>
+                            <div>
+
+                                <input className="mr-1" type="checkbox" value="92" name="c" id="film" />
+                                <label htmlFor="category-92">Film</label>
+
+                            </div>
+                            <div>
+
+                                <input className="mr-1" type="checkbox" value="40" name="c" id="art" />
+                                <label htmlFor="category-40">Art</label>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+
+                                <input className="mr-1" type="checkbox" value="14" name="c" id="festival" />
+                                <label htmlFor="category-14">Festival</label>
+
+                            </div>
+                            <div>
+
+                                <input className="mr-1" type="checkbox" value="27" name="c" id="special" />
+                                <label htmlFor="category-27">Special Events</label>
+
+                            </div>
+                            <div>
+
+                                <input className="mr-1" type="checkbox" value="76" name="c" id="comedy" />
+                                <label htmlFor="category-76">Comedy</label>
+
+                            </div>
+                            <div>
+
+                                <input className="mr-1" type="checkbox" value="18" name="c" id="talk" />
+                                <label htmlFor="category-18">Talk</label>
+
+                            </div>
+                            <div>
+
+                                <input className="mr-1" type="checkbox" value="246" name="c" id="sports" />
+                                <label htmlFor="category-246">Sport</label>
+
+                            </div>
+                        </div>
+                    </div>
+</div>
+
             </form>
         </div>
         <div className="choice d-flex justify-content-center" />
@@ -189,20 +208,28 @@ function Recipes() {
      </div>
       </section>
         <div className="carousel">
-        {/* <Carousel>
+        <Carousel>
           {events.map((event) => (
             <>
-              <div className="dish">
+              <div className="event">
                 <div>click to see the event</div>
+                <a href={event.url}>
                 <img src={event.images[0].url} />
+                </a>
+                <div>
+{event._embedded.venues[0].name}
+{' '}
+                </div>
+<div>{event.dates.start.localDate}</div>
+<div>{event.dates.start.localTime.substring(0, event.dates.start.localTime.length - 3)}</div>
+
                 <div className="label_name">{event.name}</div>
               </div>
               {}
 
             </>
           ))}
-
-        </Carousel> */}
+        </Carousel>
         </div>
 
       </div>
