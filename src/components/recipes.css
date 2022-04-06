@@ -22,11 +22,6 @@ label {
   width: 25% !important;
 }
 
-#query {
-  width: 25% !important;
-  margin-right: 2%;
-}
-
 .dish img {
   width: 170%;
   height: 250px;
@@ -40,11 +35,25 @@ h1 {
   margin-top: 80px !important;
 }
 
-.rec-carousel-wrapper {
-
+.logo {
+  width: 25vw;
 }
 
-@media screen and (max-width: 768px) {
+.tickets {
+  width: 50vw;
+}
+
+.ticket_container {
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+/* @media screen and (max-width: 768px) {
   .label_name {
     position: absolute;
     top: 80px;
@@ -58,4 +67,18 @@ h1 {
     margin-left: 2%;
   }
 
+  .filter {
+    width: 50vw;
+  }
+
+  .tickets {
+    width: 75vw;
+  }
+
+} */
+
+@media only screen and (min-width: 600px)  {
+  .tickets {
+    width: 25vw;
+  }
 }

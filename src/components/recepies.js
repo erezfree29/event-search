@@ -1,3 +1,8 @@
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable no-useless-concat */
+/* eslint-disable no-template-curly-in-string */
+/* eslint-disable max-len */
 /* eslint-disable no-empty */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable react/jsx-indent */
@@ -14,109 +19,66 @@ import { updateRecepies } from "../redux/recepies";
 import './recipes.css';
 
 function Recipes() {
-  const dispatch = useDispatch();
-  const [recipes, setRecipes] = useState([]);
+  const [events, setEvents] = useState([]);
 
   const fetchItems = async () => {
     const query = document.getElementById('query').value;
-    const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=7c1f09e1&app_key=d64e63d13c80d619abd4f13d439ebd71`;
+    const beginUrl = "https://app.ticketmaster.com/discovery/v2/events.json?";
+    const keyWord = `keyword=${query}`;
+    let endUrl = "&dmaId=602&apikey=MOnDwV7JkArTT9CYE0NA50dUQeM1Os1i";
+    let url = beginUrl + keyWord + endUrl;
+    if (document.getElementById('music').checked) {
+      endUrl = `&classificationName=music&${endUrl}`;
+      url = beginUrl + keyWord + endUrl;
+    }
+
+    if (document.getElementById('sports').checked) {
+      endUrl = `&classificationName=sportsk&${endUrl}`;
+      url = beginUrl + keyWord + endUrl;
+    }
+
+    if (document.getElementById('film').checked) {
+      endUrl = `&classificationName=filmk&${endUrl}`;
+      url = beginUrl + keyWord + endUrl;
+    }
+
+    // if (document.getElementById('theatre').checked) {
+    //   endUrl = `&classificationName=theatre&${endUrl}`;
+    //   url = beginUrl + keyWord + endUrl;
+    // }
+
+    if (document.getElementById('art').checked) {
+      endUrl = `&classificationName=art&${endUrl}`;
+      url = beginUrl + keyWord + endUrl;
+    }
+
+    if (document.getElementById('festival').checked) {
+      endUrl = `&classificationName=festival&${endUrl}`;
+      url = beginUrl + keyWord + endUrl;
+    }
+
+    if (document.getElementById('comedy').checked) {
+      endUrl = `&classificationName=comedy&${endUrl}`;
+      url = beginUrl + keyWord + endUrl;
+    }
+
+    if (document.getElementById('talk').checked) {
+      endUrl = `&classificationName=talkk&${endUrl}`;
+      url = beginUrl + keyWord + endUrl;
+    }
+
+    /* eslint-disable-next-line no-console */
+    console.log(url);
+
     const data = await fetch(url);
-    const recipesJason = await data.json();
-    let recipes = recipesJason.hits;
-    if (document.getElementById('calories').value !== 'any') {
-      const maxCalories = parseInt(document.getElementById('calories').value, 10);
-      recipes = recipes.filter((recipe) => parseInt(recipe.recipe.calories, 10) < maxCalories);
-    }
-
-    if (document.getElementById('vegan').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('Vegan'));
-    }
-
-    if (document.getElementById('vegetarian').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('Vegetarian'));
-    }
-
-    if (document.getElementById('pescatarian').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('Pescatarian'));
-    }
-
-    if (document.getElementById('mediterranean').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('Mediterranean'));
-    }
-
-    if (document.getElementById('gluten-Free').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('Gluten-Free'));
-    }
-
-    if (document.getElementById('wheat-Free').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('Wheat-Free'));
-    }
-
-    if (document.getElementById('egg-Free').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('Egg-Free'));
-    }
-
-    if (document.getElementById('tree-Nut-Free').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('tree-Nut-Free'));
-    }
-
-    if (document.getElementById('soy-Free').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('Soy-Free'));
-    }
-
-    if (document.getElementById('fish-Free').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('Fish-Free'));
-    }
-
-    if (document.getElementById('shellfish-Free').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('shellfish-Free'));
-    }
-
-    if (document.getElementById('pork-Free').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('Pork-Free'));
-    }
-
-    if (document.getElementById('red-Meat-Free').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('"Red-Meat-Free'));
-    }
-
-    if (document.getElementById('crustacean-Free').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('Crustacean-Free'));
-    }
-
-    if (document.getElementById('celery-Free').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('Celery-Free'));
-    }
-
-    if (document.getElementById('mustard-Free').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('Mustard-Free'));
-    }
-
-    if (document.getElementById('sesame-Free').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('Sesame-Free'));
-    }
-
-    if (document.getElementById('lupine-Free').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('Lupine-Free'));
-    }
-
-    if (document.getElementById('mollusk-Free').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('Mollusk-Free'));
-    }
-
-    if (document.getElementById('no_oil_added').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('No oil added'));
-    }
-
-    if (document.getElementById('sulfite-Free').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes('Sulfite-Free'));
-    }
-
-    if (document.getElementById('kosher').checked) {
-      recipes = recipes.filter((recipe) => recipe.recipe.healthLabels.includes("Kosher"));
-    }
-    setRecipes(recipes);
-    localStorage.setItem('recipes', JSON.stringify(recipes));
+    /* eslint-disable-next-line no-console */
+    const eventsJason = await data.json();
+    /* eslint-disable-next-line no-console */
+    console.log(eventsJason._embedded);
+    const { events } = eventsJason._embedded;
+    setEvents(events);
+    /* eslint-disable-next-line no-console */
+    localStorage.setItem('events', JSON.stringify(events));
   };
 
   const onSubmit = (e) => {
@@ -126,229 +88,121 @@ function Recipes() {
   };
 
   useEffect(() => {
-    if (localStorage.getItem('recipes') !== null) {
-      const storedNames = JSON.parse(localStorage.getItem("recipes"));
-      setRecipes(storedNames);
-    } else {
-      document.querySelector('.carousel').style.setProperty("display", "none", "important");
-    }
+    // if (localStorage.getItem('recipes') !== null) {
+    //   const storedNames = JSON.parse(localStorage.getItem("recipes"));
+    //   setRecipes(storedNames);
+    // } else {
+    //   document.querySelector('.carousel').style.setProperty("display", "none", "important");
+    // }
   }, []);
 
   return (
     <div>
-      <div className="d-flex justify-content-center"><h1>Find Your Recipe</h1></div>
+      <div className="d-flex justify-content-center"><h1>Events matching &quot;London&quot;</h1></div>
       <div className="recepies">
-        <form onSubmit={onSubmit} className="p-3">
-          <div className="form-group">
-            <div className="input_button d-flex">
-              <input type="text" className="form-control" id="query" placeholder="search" />
-              <button type="submit" className="btn btn-primary">Find</button>
+      <section className=" d-flex justify-content-center">
+     <div className="filter d-flex justify-content-center">
+    <fieldset>
+        <div className="type d-flex justify-content-center">
+            <form onSubmit={onSubmit} className="p-3">
+          <div className="d-flex justify-content-center">
+            <div className="form-group w-50 fg">
+              <div className="input_button">
+              <div className="d-flex justify-content-center">
+              <input
+                className="mb-3"
+                id="query"
+                name="q"
+                type="search"
+                autoComplete="off"
+                maxLength="50"
+                placeholder="Search artist, event, venue, location..."
+              />
+              </div>
+                  <div className="d-flex justify-content-center"><button type="submit" className="btn btn-primary">Find</button></div>
+              </div>
             </div>
-            <label htmlFor="select_field">Maximum Calories</label>
-            <select className="form-select" aria-label="Default select example" id="calories">
-              <option selected>any</option>
-              <option value="300">300</option>
-              <option value="500">500</option>
-              <option value="700">700</option>
-              <option value="1000">1000</option>
-            </select>
           </div>
           <div className="row">
             <div className="col-6">
               <div className="form-check d-flex">
-                <input className="form-check-input" type="checkbox" value="" id="vegan" />
+                <input className="form-check-input" type="checkbox" value="" id="music" />
                 <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-                Vegan
+                Music
               </div>
             </div>
             <div className="col-6">
               <div className="form-check d-flex">
-                <input className="form-check-input" type="checkbox" value="" id="vegetarian" />
+                <input className="form-check-input" type="checkbox" value="" id="sports" />
                 <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-                Vegetarian
+                Sports
               </div>
             </div>
             <div className="col-6">
               <div className="form-check d-flex">
-                <input className="form-check-input" type="checkbox" value="" id="pescatarian" />
+                <input className="form-check-input" type="checkbox" value="" id="film" />
                 <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-                Pescatarian
+                Film
               </div>
             </div>
             <div className="col-6">
               <div className="form-check d-flex">
-                <input className="form-check-input" type="checkbox" value="" id="mediterranean" />
+                <input className="form-check-input" type="checkbox" value="" id="art" />
                 <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-                Mediterranean
+                Art
               </div>
             </div>
             <div className="col-6">
               <div className="form-check d-flex">
-                <input className="form-check-input" type="checkbox" value="" id="gluten-Free" />
+                <input className="form-check-input" type="checkbox" value="" id="festival" />
                 <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-                Gluten-Free
+                Festival
               </div>
             </div>
             <div className="col-6">
               <div className="form-check d-flex">
-                <input className="form-check-input" type="checkbox" value="" id="shellfish-Free" />
+                <input className="form-check-input" type="checkbox" value="" id="comedy" />
                 <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-                Shellfish-Free
+                Comedy
               </div>
             </div>
             <div className="col-6">
               <div className="form-check d-flex">
-                <input className="form-check-input" type="checkbox" value="" id="fish-Free" />
+                <input className="form-check-input" type="checkbox" value="" id="talk" />
                 <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-                Fish-Free
+                Talk
               </div>
             </div>
             <div className="col-6">
               <div className="form-check d-flex">
-                <input className="form-check-input" type="checkbox" value="" id="red-Meat-Free" />
+                <input className="form-check-input" type="checkbox" value="" id="theatre" />
                 <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-                Red-Meat-Free
+                Theatre
               </div>
             </div>
-            <div className="col-6">
-              <div className="form-check d-flex">
-                <input className="form-check-input" type="checkbox" value="" id="pork-Free" />
-                <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-                Pork-free
-              </div>
-            </div>
-            <div className="col-6">
-              <div className="form-check d-flex">
-                <input className="form-check-input" type="checkbox" value="" id="crustacean-Free" />
-                <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-                Crustacean-Free
-              </div>
-            </div>
-            <div className="col -5">
-              <div className="form-check d-flex">
-                <input className="form-check-input" type="checkbox" value="" id="celery-Free" />
-                <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-                Celery-Free
-              </div>
-            </div>
-            <div className="col-6">
-            <div className="form-check d-flex">
-              <input className="form-check-input" type="checkbox" value="" id="mustard-Free" />
-              <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-              Mustard-Free
-            </div>
-            </div>
-          <div className="col-6">
-            <div className="form-check d-flex">
-              <input className="form-check-input" type="checkbox" value="" id="sesame-Free" />
-              <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-              Sesame-Free
-            </div>
           </div>
-          <div className="col-6">
-            <div className="form-check d-flex">
-              <input className="form-check-input" type="checkbox" value="" id="lupine-Free" />
-              <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-              Lupine-Free
-            </div>
-          </div>
-          <div className="col-6">
-            <div className="form-check d-flex">
-              <input className="form-check-input" type="checkbox" value="" id="Mollusk-Free" />
-              <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-              Mollusk-Free
-            </div>
-          </div>
-          <div className="col-6">
-            <div className="form-check d-flex">
-              <input className="form-check-input" type="checkbox" value="" id="Alcohol-Free" />
-              <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-              Alcohol-Free
-            </div>
-          </div>
-          <div className="col-6">
-            <div className="form-check d-flex">
-              <input className="form-check-input" type="checkbox" value="" id="no_oil_added" />
-              <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-              No oil added
-            </div>
-          </div>
-          <div className="col-6">
-            <div className="form-check d-flex">
-              <input className="form-check-input" type="checkbox" value="" id="sulfite-Free" />
-              <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-              Sulfite-Free
-            </div>
-          </div>
-          <div className="col-6">
-            <div className="form-check d-flex">
-              <input className="form-check-input" type="checkbox" value="" id="kosher" />
-              <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-              Kosher
-            </div>
-          </div>
-          <div className="col-6">
-            <div className="form-check d-flex">
-              <input className="form-check-input" type="checkbox" value="" id="wheat-Free" />
-              <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-              Wheat-Free
-            </div>
-          </div>
-          <div className="col-6">
-            <div className="form-check d-flex">
-              <input className="form-check-input" type="checkbox" value="" id="tree-Nut-Free" />
-              <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-              Tree-Nut-Free
-            </div>
-          </div>
-          <div className="col-6">
-            <div className="form-check d-flex">
-              <input className="form-check-input" type="checkbox" value="" id="soy-Free" />
-              <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-              Soy-Free
-            </div>
-          </div>
-          <div className="col-6">
-            <div className="form-check d-flex">
-              <input className="form-check-input" type="checkbox" value="" id="egg-Free" />
-              <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-              Egg-Free
-            </div>
-          </div>
-          <div className="col-6">
-            <div className="form-check d-flex">
-              <input className="form-check-input" type="checkbox" value="" id="mollusk-Free" />
-              <label className="form-check-label p-1" htmlFor="defaultCheck1" />
-              Mollusk-Free
-            </div>
-          </div>
-          </div>
-        </form>
+            </form>
+        </div>
+        <div className="choice d-flex justify-content-center" />
+
+    </fieldset>
+     </div>
+      </section>
         <div className="carousel">
-        <Carousel>
-          {recipes.map((recipe) => (
+        {/* <Carousel>
+          {events.map((event) => (
             <>
               <div className="dish">
-                <div>click to see the recipe</div>
-                <div className="label_name">{recipe.recipe.label}</div>
-                <div>
-                  <a href={recipe.recipe.url}><img src={recipe.recipe.image} className="d-flex" /></a>
-                </div>
+                <div>click to see the event</div>
+                <img src={event.images[0].url} />
+                <div className="label_name">{event.name}</div>
               </div>
-              {recipe.recipe.cautions.length > 0
-        && (
-
-          <div>
-          cautions-
-          {`  ${recipe.recipe.cautions}`}
-          </div>
-
-        )}
+              {}
 
             </>
           ))}
 
-        </Carousel>
+        </Carousel> */}
         </div>
 
       </div>

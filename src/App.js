@@ -6,12 +6,11 @@ import {
   Route,
 } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { store } from './redux/store';
 import Recipes from './components/recepies';
 
 function App() {
   return (
-    <Provider store={store}>
+    <>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Recipe App</title>
@@ -25,7 +24,8 @@ function App() {
           </Switch>
         </div>
       </Router>
-    </Provider>
+
+    </>
   );
 }
 
