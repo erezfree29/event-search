@@ -6,7 +6,7 @@ import {
   Route,
 } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import Recipes from './components/recepies';
+import Events from './components/events';
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
 }
 
 function Home() {
-  return <Recipes />;
+  return <Events />;
 }
 
 export default App;

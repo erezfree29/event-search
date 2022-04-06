@@ -15,10 +15,9 @@
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useEffect, useState } from 'react';
 import Carousel from "react-elastic-carousel";
-import { updateRecepies } from "../redux/recepies";
-import './recipes.css';
+import './events.css';
 
-function Recipes() {
+function Events() {
   const [events, setEvents] = useState([]);
 
   const fetchItems = async () => {
@@ -111,7 +110,7 @@ function Recipes() {
      <div className="filter d-flex justify-content-center">
     <fieldset>
         <div className="type d-flex justify-content-center">
-            <form onSubmit={onSubmit} className="p-3">
+            <form onSubmit={onSubmit} className="mt-2 p-3">
           <div className="d-flex justify-content-center">
             <div className="form-group w-50 fg">
               <div className="input_button">
@@ -237,4 +236,4 @@ function Recipes() {
 
   );
 }
-export default Recipes;
+export default Events;
