@@ -1,21 +1,13 @@
-# Metrics-web app
+# Events-Search app
 
-This is a final capstone project app.
-
-The app fetches information from the https://www.scorebat.com API.
-
-It displays recent matches of Europe's top leagues, clicking on an image will link the user to a video of the match.
+An app for searching events in London
 
 
 Additional description of the project and its features.
 
 ## 🔴  Live Demo
 
-[Metrics-webapp](https://wizardly-kilby-57b112.netlify.app/)
-
-## Project Overview Video
-
-[Watch Here](https://www.loom.com/share/83001f604bd04a51a28fd19b935d4727)
+[Events-webapp]https://monumental-beijinho-b4348e.netlify.app/)
 
 
 ## Built with
@@ -28,7 +20,6 @@ Additional description of the project and its features.
 -   HTML
 -   CSS
 -   vscode
--   Lots of love :heart:
 
 ### Installation
 
@@ -44,13 +35,6 @@ alternatively to installing npm is to install 'yarn'
 > 2. run `cd Metrics-webapp`
 > 3. type npm install / or yarn install.
 > 4. type npm start 
-
-
-### testing
-
-> 1. I have used the 'jest' testing Library.
-> 2. The jest package is listed in the project's package, Jason.
-> 3. Once you run npm install simply type jest and it will run the tests 
 
 ## Author
 
@@ -70,18 +54,6 @@ Feel free to check the [issues](https://github.com/erezfree29/Metrics-webapp/iss
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
--   Microverse
--   The Odin Project
-
-## Design
-
-I have a design created by 
-- Nelson Sakwa, User Interface Designer
-- Sakwa Design Studio Nairobi, Kenya 
-- sakwadesign.com
 
 ## 📝 MIT License
 
